@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    build: ./app
+    working_dir: /app/
+    restart: always
+    network_mode: host
+    volumes:
+      - ./app:/app
+    entrypoint:
+      - python
+      - main.py
+    environment:
+      - TZ=Europe/Moscow
+

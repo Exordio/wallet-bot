@@ -1,0 +1,14 @@
+stages:
+  - build
+
+build-pipe:
+#  before_script:
+
+
+  only:
+    - main
+  tags:
+    - prod
+  stage: build
+  script:
+    - echo "Prod deploy starting"
