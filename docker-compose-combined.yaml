@@ -19,7 +19,7 @@ services:
   ch:
     image: yandex/clickhouse-server
     volumes:
-      - ../chdb/db:/var/lib/clickhouse
+      - ./dbs:/var/lib/clickhouse
     ports:
       - "8123:8123"
       - "9000:9000"
